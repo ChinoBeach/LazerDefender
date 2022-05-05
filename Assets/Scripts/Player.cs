@@ -7,19 +7,40 @@ public class Player : MonoBehaviour
 {
     //variables
     Vector2 rawInput;
+    Vector2 minBounds;
+    Vector2 maxBounds;
 
 
     [SerializeField] float fltMoveSpeed = 5f;
-    
+    [SerializeField] float fltPaddingLeft;
+    [SerializeField] float fltPaddingRight;
+    [SerializeField] float fltPaddingTop;
+    [SerializeField] float fltPaddingBottom;
+    void Start()
+    {
+        InitBounds();
+    }
     void Update()
     {
         Move();
     }
 
+    void InitBounds()
+    {
+        Camera mainCamera = Camera.main;
+        minBounds = mainCamera.ViewportToWorldPoint(new Vector2(0, 0));
+        maxBounds = mainCamera.ViewportToWorldPoint(new Vector2(1, 1));
+    }
     void Move()
     {
-        Vector3 delta = rawInput * fltMoveSpeed * Time.deltaTime;
-        transform.position += delta;
+        Vector2 newPos = new Vector2();
+
+        Vector2 delta = rawInput * fltMoveSpeed * Time.deltaTime;
+
+        newPos.x = Mathf.Clamp(transform.position.x + delta.x, minBounds.x + fltPaddingLeft, maxBounds.x - fltPaddingRight);
+        newPos.y = Mathf.Clamp(transform.position.y + delta.y, minBounds.y + fltPaddingBottom, maxBounds.y - fltPaddingTop);
+
+        transform.position = newPos;
     }
 
     void OnMove(InputValue value)
