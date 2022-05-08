@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 312399816319339115}
   - component: {fileID: 312399816319339112}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rocketship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: -4440821497171701659}
   - component: {fileID: -8047113106013915646}
   - component: {fileID: 2128980949202229042}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
