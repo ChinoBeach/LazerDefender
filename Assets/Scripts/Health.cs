@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Trigger");
+        //Debug.Log("Trigger");
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
 
         if(damageDealer != null)
@@ -18,14 +18,14 @@ public class Health : MonoBehaviour
             TakeDamage(damageDealer.GetDamage());
             //tell damage dealer that it hit something
             damageDealer.Hit();
-            Debug.Log("Hit");
+           // Debug.Log("Hit");
         }
     }
 
      void TakeDamage(int intDamage)
     {
         intHealth -= intDamage;
-        Debug.Log("Damage Delt");
+        //Debug.Log("Damage Delt");
 
         if (intHealth >= 0)
         {
