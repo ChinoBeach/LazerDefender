@@ -355,7 +355,8 @@ MonoBehaviour:
   waveConfigs:
   - {fileID: 11400000, guid: aba7c7512c65554469938c18d97b7d6d, type: 2}
   - {fileID: 11400000, guid: 2799b672db9692b4a8613565700a9bcc, type: 2}
-  fltTimeBetweenWaves: 2
+  fltTimeBetweenWaves: 2.02
+  bolIsLooping: 1
 --- !u!4 &1945278680
 Transform:
   m_ObjectHideFlags: 0
