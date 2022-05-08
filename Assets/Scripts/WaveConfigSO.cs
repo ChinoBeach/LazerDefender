@@ -6,6 +6,9 @@ using UnityEngine;
 public class WaveConfigSO : ScriptableObject
 {
     [SerializeField] List<GameObject> enemyPrefabs;
+    [SerializeField] float fltTimeBetweenEnemySpawns = 1f;
+    [SerializeField] float fltSpawnTimeVariance = 0f;
+    [SerializeField] float fltMinimumSpawnTime = .02f;
          
     [SerializeField] Transform pathPrefab;
     [SerializeField] float fltMoveSpeed = 5f;
@@ -41,4 +44,10 @@ public class WaveConfigSO : ScriptableObject
         return enemyPrefabs[intIndex];
     }
 
+    public float GetRandomSpawnTime()
+    {
+        float fltSpawnTime = Random.Range(fltTimeBetweenEnemySpawns - fltSpawnTimeVariance,
+            fltSpawnTimeVariance + fltSpawnTimeVariance);
+        return Mathf.Clamp(fltSpawnTime, fltMinimumSpawnTime, float.MaxValue);
+    }
 }
