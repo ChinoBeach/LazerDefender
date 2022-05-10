@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 5490889298288932001}
   - component: {fileID: 5490889298288932000}
   - component: {fileID: 5490889298288932007}
+  - component: {fileID: 1562157951}
   m_Layer: 5
   m_Name: Game UI
   m_TagString: Untagged
@@ -372,6 +373,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1562157951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5490889298288932006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d84e009de0b08104893a1baee946abe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 5490889298563674047}
+  playerHealth: {fileID: 0}
+  scoreText: {fileID: 5490889298064037533}
+  waveText: {fileID: 5490889298218865372}
 --- !u!1 &5490889298563674045
 GameObject:
   m_ObjectHideFlags: 0

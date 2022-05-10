@@ -61,7 +61,7 @@ public class Health : MonoBehaviour
         intHealth -= intDamage;
         //Debug.Log("Damage Delt");
 
-        if (intHealth >= 0)
+        if (intHealth <= 0)
         {
             Die();
         }
