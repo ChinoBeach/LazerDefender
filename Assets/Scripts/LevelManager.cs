@@ -5,8 +5,15 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] float fltSceneLoadDelay = 2f;
-   public void LoadGame()
+    ScoreKeeper scoreKeeper;
+
+    void Awake()
     {
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+    }
+    public void LoadGame()
+    {
+        scoreKeeper.ResetScore();
         SceneManager.LoadScene("GamePlayScene");
     }
     public void LoadMainMenu()
