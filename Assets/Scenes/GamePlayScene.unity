@@ -341,6 +341,13 @@ MonoBehaviour:
   waveConfigs:
   - {fileID: 11400000, guid: aba7c7512c65554469938c18d97b7d6d, type: 2}
   - {fileID: 11400000, guid: 2799b672db9692b4a8613565700a9bcc, type: 2}
+  - {fileID: 11400000, guid: 8bf987f68aa8f5f479b79877c2832e1c, type: 2}
+  - {fileID: 11400000, guid: ad92494c57ca693489ca085451178211, type: 2}
+  - {fileID: 11400000, guid: fc7e1546eff7df14fab49e9e4eab6e98, type: 2}
+  - {fileID: 11400000, guid: 4e5c146de6dcfc641bba079765cbdb12, type: 2}
+  - {fileID: 11400000, guid: b8fc9b373a6ac544f935c52fff8faf10, type: 2}
+  - {fileID: 11400000, guid: 91f7cfb9bbb264d4d99d469f2e737545, type: 2}
+  - {fileID: 11400000, guid: 50f33e2cf61cbf9469dfc2a9ae6a9c2e, type: 2}
   fltTimeBetweenWaves: 2.02
   intWaveNumber: 0
   bolIsLooping: 1
@@ -498,6 +505,14 @@ PrefabInstance:
     - target: {fileID: 312399816904775527, guid: ba7638440c45e314f970cac0af2a4170, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 719262689096462523, guid: ba7638440c45e314f970cac0af2a4170, type: 3}
+      propertyPath: fltPaddingTop
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128980949202229042, guid: ba7638440c45e314f970cac0af2a4170, type: 3}
+      propertyPath: intHealth
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba7638440c45e314f970cac0af2a4170, type: 3}
