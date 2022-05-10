@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Health : MonoBehaviour
 {
     [SerializeField] int intHealth = 50;
@@ -11,8 +12,12 @@ public class Health : MonoBehaviour
     [SerializeField] bool bolApplyCameraShake;
     CameraShake cameraShake;
 
+    AudioPlayer audioPlayer;
+
+
     void Awake()
     {
+        audioPlayer = FindObjectOfType<AudioPlayer>();
         cameraShake = Camera.main.GetComponent<CameraShake>();
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -26,6 +31,8 @@ public class Health : MonoBehaviour
             TakeDamage(damageDealer.GetDamage());
             //play hit effect 
             PlayHitEffect();
+            //play the audio
+            audioPlayer.PlayExplosionClip();
             //Shake the Camera 
             ShakeCamera();
             //tell damage dealer that it hit something
