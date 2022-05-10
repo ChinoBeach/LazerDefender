@@ -185,7 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bolIsPlayer: 0
   intScore: 50
-  intHealth: 50
+  intHealth: 20
   hitEffect: {fileID: 1738275074965027353, guid: 2959774fde21fd740abf64355b5bcae4, type: 3}
   bolApplyCameraShake: 0
 --- !u!114 &6509781786820766411
