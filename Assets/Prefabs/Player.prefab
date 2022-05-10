@@ -218,6 +218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d50133b4a19b2f40be18c6b7c00dfcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bolIsPlayer: 1
+  intScore: 0
   intHealth: 50
   hitEffect: {fileID: 1738275074965027353, guid: 2959774fde21fd740abf64355b5bcae4, type: 3}
   bolApplyCameraShake: 1

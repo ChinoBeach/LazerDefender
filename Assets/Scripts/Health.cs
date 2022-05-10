@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] bool bolIsPlayer;
+    [SerializeField] int intScore = 50;
     [SerializeField] int intHealth = 50;
     [SerializeField] ParticleSystem hitEffect;
 
@@ -13,12 +15,14 @@ public class Health : MonoBehaviour
     CameraShake cameraShake;
 
     AudioPlayer audioPlayer;
+    ScoreKeeper scoreKeeper;
 
 
     void Awake()
     {
         audioPlayer = FindObjectOfType<AudioPlayer>();
         cameraShake = Camera.main.GetComponent<CameraShake>();
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -48,7 +52,10 @@ public class Health : MonoBehaviour
             cameraShake.Play();
         }
     }
-
+    public int GetHealth()
+    {
+        return intHealth;
+    }
     void TakeDamage(int intDamage)
     {
         intHealth -= intDamage;
@@ -56,8 +63,16 @@ public class Health : MonoBehaviour
 
         if (intHealth >= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    void Die()
+    {if(!bolIsPlayer)
+        {
+            scoreKeeper.ModifyScore(intScore);
+        }
+        Destroy(gameObject);
     }
 
     void PlayHitEffect()
